@@ -13,6 +13,7 @@
 * Serializable (also solves phantom-reads problem)
 
 Read operations use Shared locks
+
 Write/Update operations use Exclusive locks
 
 ## Dirty read problem:
