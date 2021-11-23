@@ -6,16 +6,16 @@
 * Lost-Updates Problem
 * Phantom Reads Problem
 
-Transaction Isolation levels:
-Read uncommitted
-Read committed (solves dirty-read problem)
-Repeatable read (solves dirty-read, non-repeatable reads and lost-updates problem)
-Serializable (also solves phantom-reads problem)
+## Transaction Isolation levels:
+* Read uncommitted
+* Read committed (solves dirty-read problem)
+* Repeatable read (solves dirty-read, non-repeatable reads and lost-updates problem)
+* Serializable (also solves phantom-reads problem)
 
 Read operations use Shared locks
 Write/Update operations use Exclusive locks
 
-Dirty read problem:
+## Dirty read problem:
 * Regardless of the transaction isolation level, a transaction always acquires an exclusive lock on the data it modifies and holds the lock until the end of the transaction.
 * shared locks are not acquired at all at the read uncommitted isolation level
 
