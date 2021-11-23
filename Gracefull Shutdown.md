@@ -1,3 +1,5 @@
+# Graceful Shutdown Nodejs server.
+
 Looking to gracefully shutdown your Nodejs HTTP server? Well, it's actually a little more difficult than you think. Without handling process signals, like "ctrl-c", your application terminates immediately. Which means, there may be requests still processing that you terminated before completion. In a live environment, this is a horrible user experience. Unfortunately, even if you did catch the process' signals, Node doesn't actually have a built in mechanism for gracefully shutting down a running HTTP server.
 
 ### Defining the problem
