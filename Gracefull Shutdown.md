@@ -29,8 +29,11 @@ server.close(function() {
 ```
 Unfortunately, not really, there's a problem with this. Reading the documentation might make it a little more clear:
 > Stops the server from accepting new connections and keeps existing connections. This function is asynchronous, the server is finally closed when all connections are ended and the server emits a 'close' event. - From Nodejs Docs
+
 The important part of the description to remember is "keeps existing connections". While close does stop the listening socket from accepting new ones, sockets that are already connected may continue to operate - which is fine if they're mid-request - but this also includes sockets that are connected with a 'keep-alive' connection type.
+
 >HTTP persistent connection, also called HTTP keep-alive, or HTTP connection reuse, is the idea of using a single TCP connection to send and receive multiple HTTP requests/responses, as opposed to opening a new connection for every single request/response pair - From Wikipedia
+
 This means that sockets that are kept alive will remain alive and still capable of making additional HTTP requests. This is obviously not what we want. While it fulfils points one and three of our definition of graceful shutdown, it does not fulfill number two and is thus, not a complete solution. A graceful shutdown should programatically:
 1. Close the listening socket to prevent new connections
 2. Close all idle keep-alive sockets to prevent new requests during shutdown
