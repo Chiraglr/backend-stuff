@@ -53,6 +53,7 @@ But how is write possible with shared lock? Shared lock is only on the rows sati
 * There are shared and exclusive range locks.
 
 RS1[P] .. R1[P] .. RE2[new] (waits) .. R1[P] (same) .. c1 .. W2[new] .. c2
+
 RS - Range Shared lock, RE - Range Exclusive lock
 
 
