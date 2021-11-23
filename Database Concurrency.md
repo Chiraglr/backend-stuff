@@ -1,10 +1,10 @@
 # Transaction Isolation levels
 
-Problems:
-Dirty Read Problem
-Non-Repeatable Reads Problem
-Lost Updates Problem
-Phantom Reads Problem
+## Problems:
+* Dirty Read Problem
+* Non-Repeatable Reads Problem
+* Lost-Updates Problem
+* Phantom Reads Problem
 
 Transaction Isolation levels:
 Read uncommitted
