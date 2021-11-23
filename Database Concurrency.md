@@ -50,8 +50,9 @@ But how is write possible with shared lock? Shared lock is only on the rows sati
 
 * Serializable is the highest isolation level and prevents all possible types of concurrency phenomena, but the serializable level decreases performance and increases the likelihood of deadlocks.
 * The serializable isolation level forces queries with ranged predicates to acquire range locks to avoid phantom reads.
-* There are shared and exclusive range locks. RS1[P] .. R1[P] .. RE2[new] (waits) .. R1[P] (same) .. c1 .. W2[new] .. c2 
-      RS - Range Shared lock, RE - Range Exclusive lock
+* There are shared and exclusive range locks.
+RS1[P] .. R1[P] .. RE2[new] (waits) .. R1[P] (same) .. c1 .. W2[new] .. c2
+RS - Range Shared lock, RE - Range Exclusive lock
 
 
 ## FAQs:
