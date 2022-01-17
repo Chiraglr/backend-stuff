@@ -66,5 +66,5 @@ RS - Range Shared lock, RE - Range Exclusive lock
 
 ## Links:
 * [https://levelup.gitconnected.com/transaction-isolation-levels-in-ms-sql-guide-for-backend-developers-6a5998e34f6c#8955]
-* [https://drive.google.com/file/d/1cTs3tt0BJSfNJO9n9EQJN-u2RtSaWqQR/view?usp=sharing] disable js in browser to view content
+* [https://drive.google.com/file/d/1cTs3tt0BJSfNJO9n9EQJN-u2RtSaWqQR/view?usp=sharing] download, open in chrome and disable js in browser to view content
 
